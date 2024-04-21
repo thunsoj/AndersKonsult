@@ -1,2 +1,2 @@
 # AndersKonsult
-GitHub Pages hosted website for Anders konsulting
+GitHub Pages-hosted website for Anders konsulting
