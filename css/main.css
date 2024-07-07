@@ -585,10 +585,15 @@ figure.effect-bubba:hover p {
 @media (max-width: 991px) {
   body {
     overflow-x: hidden;
+    width: 100vw;
+    position: relative;
   }
 
   .container-fluid {
     overflow-x: hidden;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .tm-sidebar {
@@ -626,10 +631,34 @@ figure.effect-bubba:hover p {
   }
 
   .tm-section-wrap {
-    width: 100%;
+    width: 100vw;
     margin-left: 0;
     padding-left: 15px;
     padding-right: 15px;
+    box-sizing: border-box;
+  }
+
+  .parallax-window {
+    min-height: 100vh;
+    width: 100vw;
+  }
+
+  .tm-section {
+    padding: 30px 15px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #intro {
+    min-height: 100vh;
+    width: 100vw;
+  }
+
+  .tm-intro {
+    max-width: 100%;
+    padding: 30px 15px;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .tm-bg-black-transparent {

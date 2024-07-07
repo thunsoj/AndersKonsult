@@ -65,20 +65,36 @@ $(document).ready(function() {
 
   // Sidebar toggle
   $(".navbar-toggler").on("click", function(e) {
+    e.preventDefault();
     $(".tm-sidebar").toggleClass("show");
+    $(this).toggleClass("active");
     e.stopPropagation();
   });
 
   // Hide sidebar when clicking outside
-  $("html").click(function(e) {
-    var sidebar = document.getElementById("tmSidebar");
-    if (!sidebar.contains(e.target)) {
+  $(document).on("click", function(e) {
+    if (!$(e.target).closest(".tm-sidebar, .navbar-toggler").length) {
       $(".tm-sidebar").removeClass("show");
+      $(".navbar-toggler").removeClass("active");
     }
   });
 
   // Hide sidebar when clicking on nav links
   $("#tmMainNav .nav-link").click(function() {
     $(".tm-sidebar").removeClass("show");
+    $(".navbar-toggler").removeClass("active");
+  });
+
+  // Adjust parallax for mobile
+  if ($(window).width() < 992) {
+    $(".parallax-window").parallax("disable");
+  }
+
+  $(window).resize(function() {
+    if ($(window).width() < 992) {
+      $(".parallax-window").parallax("disable");
+    } else {
+      $(".parallax-window").parallax("enable");
+    }
   });
 });
