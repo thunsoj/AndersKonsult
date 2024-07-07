@@ -287,6 +287,9 @@ a {
   .tm-gallery-wrap {
     max-width: 520px;
   }
+  .tm-section-half {
+    padding: 10px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -731,13 +734,13 @@ figure.effect-bubba:hover p {
 
 @media (max-width: 767px) {
   .tm-section {
-    padding: 30px;
+    padding: 20px;
   }
 }
 
 @media (max-width: 554px) {
   .tm-section {
-    padding: 15px;
+    padding: 10px;
   }
 }
 
