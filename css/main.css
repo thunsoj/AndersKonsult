@@ -583,6 +583,55 @@ figure.effect-bubba:hover p {
 }
 
 @media (max-width: 991px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .container-fluid {
+    overflow-x: hidden;
+  }
+
+  .tm-sidebar {
+    width: 250px;
+    left: -250px;
+    padding: 15px;
+    transition: all 0.3s ease;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+  }
+
+  .navbar-toggler {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+    border-radius: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    z-index: 1001;
+  }
+
+  .tm-sidebar.show {
+    left: 0;
+  }
+
+  .tm-sidebar.show .navbar-toggler {
+    left: 250px;
+  }
+
+  .tm-section-wrap {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
   .tm-bg-black-transparent {
     background-color: rgba(0, 0, 0, 0.5);
   }
@@ -632,44 +681,6 @@ figure.effect-bubba:hover p {
 
   footer p {
     line-height: 1;
-  }
-
-  .tm-sidebar {
-    width: 250px;
-    left: -250px;
-    padding: 15px;
-    transition: all 0.3s ease;
-  }
-
-  .navbar-toggler {
-    display: block;
-    position: fixed;
-    left: 0;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px 15px;
-    transition: all 0.3s ease;
-    border-radius: 0;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    top: 5px;
-  }
-
-  .navbar-toggler:focus {
-    outline: none;
-  }
-
-  .tm-sidebar.show {
-    left: 0;
-  }
-
-  .tm-sidebar.show .navbar-toggler {
-    left: 250px;
-  }
-
-  .tm-section-wrap {
-    width: 100%;
   }
 
   figure.effect-bubba h2 {
