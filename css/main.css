@@ -266,35 +266,31 @@ a {
 }
 
 @media (max-width: 1600px) {
-  .tm-gallery-wrap {
-    max-width: 780px;
-  }
+  
 }
 
 @media (max-width: 1200px) {
-  .tm-gallery-wrap {
-    max-width: 520px;
-  }
+  
 }
 
 @media (max-width: 991px) {
-  .tm-gallery-wrap {
-    max-width: 780px;
+  .tm-section-half {
+    padding: 10px;
   }
 }
 
 @media (max-width: 767px) {
-  .tm-gallery-wrap {
-    max-width: 520px;
-  }
+  
   .tm-section-half {
     padding: 10px;
   }
 }
 
 @media (max-width: 480px) {
-  .tm-gallery-wrap {
-    max-width: 260px;
+  
+  .tm-section-half {
+    width: 100%;
+    padding: 10px;
   }
 }
 
