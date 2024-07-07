@@ -274,9 +274,6 @@ a {
 }
 
 @media (max-width: 991px) {
-  .tm-section-half {
-    padding: 10px;
-  }
 }
 
 @media (max-width: 767px) {
@@ -290,7 +287,7 @@ a {
   
   .tm-section-half {
     width: 100%;
-    padding: 10px;
+    padding: 5px;
   }
 }
 
@@ -659,11 +656,12 @@ figure.effect-bubba:hover p {
   }
 
   .tm-intro {
-    max-width: 100%;
-    padding: 30px 15px;
-    margin-right: auto;
-    margin-left: auto;
-  }
+  max-width: 500px;
+  width: 100%;
+  padding: 55px;
+  margin-right: 0;
+  margin-left: auto;
+}
 
   .tm-bg-black-transparent {
     background-color: rgba(0, 0, 0, 0.5);
