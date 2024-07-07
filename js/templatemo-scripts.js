@@ -1,65 +1,21 @@
 $(document).ready(function() {
-  // Single Page Nav for highlighting nav items
   $("#tmMainNav").singlePageNav();
 
-  // Carousel in Our Work section
-  $(".tm-gallery").slick({
-    dots: true,
-    infinite: false,
-    arrows: false,
-    speed: 300,
-    slidesToShow: 4,
-    slidesToScroll: 2,
-    responsive: [
-      {
-        breakpoint: 1600,
-        settings: {
-          arrows: false,
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 1200,
-        settings: {
-          arrows: false,
-          slidesToShow: 2,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 991,
-        settings: {
-          arrows: false,
-          slidesToShow: 3,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          arrows: false,
-          slidesToShow: 2,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: false,
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  });
-
+  // Sidebar toggle
   $(".navbar-toggler").on("click", function(e) {
     e.preventDefault();
-    $(".tm-sidebar").toggleClass("show");
-    $(this).toggleClass("active");
+    $(".tm-sidebar").addClass("show");
+    $(this).hide(); // Hide the hamburger menu
+    $(".close-btn").show(); // Show the close button
+    e.stopPropagation();
+  });
+
+  // Close sidebar
+  $(".close-btn").on("click", function(e) {
+    e.preventDefault();
+    $(".tm-sidebar").removeClass("show");
+    $(".navbar-toggler").show(); // Show the hamburger menu
+    $(this).hide(); // Hide the close button
     e.stopPropagation();
   });
 
@@ -67,14 +23,16 @@ $(document).ready(function() {
   $(document).on("click", function(e) {
     if (!$(e.target).closest(".tm-sidebar, .navbar-toggler").length) {
       $(".tm-sidebar").removeClass("show");
-      $(".navbar-toggler").removeClass("active");
+      $(".navbar-toggler").show();
+      $(".close-btn").hide();
     }
   });
 
   // Hide sidebar when clicking on nav links
   $("#tmMainNav .nav-link").click(function() {
     $(".tm-sidebar").removeClass("show");
-    $(".navbar-toggler").removeClass("active");
+    $(".navbar-toggler").show();
+    $(".close-btn").hide();
   });
 
   // Adjust parallax for mobile
@@ -90,4 +48,3 @@ $(document).ready(function() {
     }
   });
 });
-

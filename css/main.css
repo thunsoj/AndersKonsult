@@ -11,6 +11,7 @@ body {
   font-size: 18px;
   font-weight: 400;
   overflow-x: hidden;
+  width: 100%;
   color: #707172;
   background-color: #666;
 }
@@ -589,6 +590,17 @@ figure.effect-bubba:hover p {
   transition: all 0.3s ease;
 }
 
+.close-btn {
+
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
 @media (max-width: 991px) {
   body {
     overflow-x: hidden;
@@ -627,10 +639,7 @@ figure.effect-bubba:hover p {
   }
 
   .tm-section-wrap {
-    width: 100vw;
-    margin-left: 0;
-    padding-left: 15px;
-    padding-right: 15px;
+    width: 100%;
     box-sizing: border-box;
   }
 
@@ -741,5 +750,7 @@ figure.effect-bubba:hover p {
     padding: 50px 30px;
   }
 }
+
+
 
 
