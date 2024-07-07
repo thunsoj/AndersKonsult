@@ -53,33 +53,32 @@ $(document).ready(function() {
           slidesToScroll: 1
         }
       }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
     ]
   });
 
   // Image Pop Up
   $(".tm-gallery").magnificPopup({
-    delegate: "a", // child items selector, by clicking on it popup will open
+    delegate: "a",
     type: "image",
     gallery: { enabled: true }
   });
 
+  // Sidebar toggle
   $(".navbar-toggler").on("click", function(e) {
     $(".tm-sidebar").toggleClass("show");
     e.stopPropagation();
   });
 
+  // Hide sidebar when clicking outside
   $("html").click(function(e) {
     var sidebar = document.getElementById("tmSidebar");
-
     if (!sidebar.contains(e.target)) {
       $(".tm-sidebar").removeClass("show");
     }
   });
 
-  $("#tmMainNav .nav-link").click(function(e) {
+  // Hide sidebar when clicking on nav links
+  $("#tmMainNav .nav-link").click(function() {
     $(".tm-sidebar").removeClass("show");
   });
 });

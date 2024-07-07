@@ -79,19 +79,27 @@ a {
   max-width: none;
 }
 
-.tm-brand {
-  font-size: 2.6rem;
-}
-
 .tm-brand-box {
   box-sizing: content-box;
   width: 100%;
   max-width: 230px;
-  min-height: 160px;
+  height: 160px; /* Fix the height */
   color: white;
   text-align: center;
   margin: 70px auto 90px;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
+
+.tm-brand {
+  font-size: 2.6rem;
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  width: 100%; /* Ensure full width */
+  text-align: center; /* Ensure text is centered */
+}
+
 
 .tm-double-border-1,
 .tm-double-border-2 {
@@ -589,6 +597,30 @@ figure.effect-bubba:hover p {
   .tm-brand {
     padding: 20px 30px;
   }
+
+  .tm-brand-box {
+    box-sizing: content-box;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    max-width: 200px;
+    min-height: 100px;
+    color: white;
+    text-align: center;
+   
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  }
+  
+  .tm-brand {
+    font-size: 2rem;
+    padding: 10 10; 
+    margin: 0; 
+    width: 100%; 
+    text-align: center;
+  }
+  
+  
 
   .tm-main-nav {
     margin-bottom: 60px;
