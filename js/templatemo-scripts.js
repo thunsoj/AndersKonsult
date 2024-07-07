@@ -56,14 +56,6 @@ $(document).ready(function() {
     ]
   });
 
-  // Image Pop Up
-  $(".tm-gallery").magnificPopup({
-    delegate: "a",
-    type: "image",
-    gallery: { enabled: true }
-  });
-
-  // Sidebar toggle
   $(".navbar-toggler").on("click", function(e) {
     e.preventDefault();
     $(".tm-sidebar").toggleClass("show");
@@ -98,3 +90,4 @@ $(document).ready(function() {
     }
   });
 });
+
