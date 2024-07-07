@@ -277,7 +277,25 @@ a {
   
 }
 
+@media (min-width: 992px) {
+  .navbar-toggler,
+  .close-btn {
+    display: none !important;
+  }
+
+  .tm-sidebar {
+    display: block !important;
+  }
+}
+
 @media (max-width: 991px) {
+  .tm-sidebar {
+    display: none;
+  }
+
+  .tm-sidebar.show {
+    display: block;
+  }
 }
 
 @media (max-width: 767px) {
